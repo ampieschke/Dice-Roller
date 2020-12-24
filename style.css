@@ -1,3 +1,24 @@
+h1{
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 900;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+}
+
+p{
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+}
+
+
+.btn-danger{
+margin-bottom: 10px;
+}
+
 .roll{
     margin: 5px;
 }
