@@ -1,220 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Jakkob's Trouble</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <container class="container-fluid">
-            <h1>Wargamming Dice Roller</h1>
-        </container>
+      <container class="container-fluid">
+        <h1>Wargaming Dice Roller</h1>
+      </container>
     </header>
 
     <!-- BEGIN ROLLING CARDS -->
     <container class="row justify-content-start">
-        <div class="card-group">
-            <div class="roll card text-center">
-                <div class="card-body">
-                    <h2 class="card-title">To Hit</h2>
-                    <p class="card-text">Rolling Your Attacks</p>
-                    <button id="to-hit" class="btn btn-danger">Roll to Hit!</button>
-                    <h3 id="hit-one-rolls"></h3>
-                    <h3 id="hit-two-rolls"></h3>
-                    <h3 id="hit-three-rolls"></h3>
-                    <h3 id="hit-four-rolls"></h3>
-                    <h3 id="hit-five-rolls"></h3>
-                    <h3 id="hit-six-rolls"></h3>
-                </div>
-            </div>
-            <div class="roll card text-center">
-                <div class="card-body">
-                    <h2 class="card-title">To Wound</h2>
-                    <p class="card-text">Rolling Your Hits</p>
-                    <button id="to-wound" class="btn btn-danger" data-bs-toggle="button">Roll to Wound!</button>
-                    <h3 id="wound-one-rolls"></h3>
-                    <h3 id="wound-two-rolls"></h3>
-                    <h3 id="wound-three-rolls"></h3>
-                    <h3 id="wound-four-rolls"></h3>
-                    <h3 id="wound-five-rolls"></h3>
-                    <h3 id="wound-six-rolls"></h3>
-                </div>
-            </div>
-            <div class="roll card text-center">
-                <div class="card-body">
-                    <h2 class="card-title">To Save</h2>
-                    <p class="card-text">Defender Rolls to Save Total Wounds</p>
-                    <a href="#" id="to-save" class="btn btn-danger" data-bs-toggle="button">Roll to Save!</a>
-                    <h3 id="save-one-rolls"></h3>
-                    <h3 id="save-two-rolls"></h3>
-                    <h3 id="save-three-rolls"></h3>
-                    <h3 id="save-four-rolls"></h3>
-                    <h3 id="save-five-rolls">
-                        </31>
-                        <h3 id="save-six-rolls"></h3>
-                </div>
-            </div>
+      <div class="card-group">
+        <div class="roll card text-center">
+          <div class="card-body">
+            <h2 class="card-title">To Hit</h2>
+            <p class="card-text">Rolling Your Attacks</p>
+            <button id="to-hit" class="btn btn-danger">Roll to Hit!</button>
+
+            <h3 id="hit-one-rolls"></h3>
+            <h3 id="hit-two-rolls"></h3>
+            <h3 id="hit-three-rolls"></h3>
+            <h3 id="hit-four-rolls"></h3>
+            <h3 id="hit-five-rolls"></h3>
+            <h3 id="hit-six-rolls"></h3>
+          </div>
         </div>
+        <div class="roll card text-center">
+          <div class="card-body">
+            <h2 class="card-title">To Wound</h2>
+            <p class="card-text">Rolling Your Hits</p>
+            <button
+              id="to-wound"
+              class="btn btn-danger"
+              data-bs-toggle="button"
+            >
+              Roll to Wound!
+            </button>
+            <h3 id="wound-one-rolls"></h3>
+            <h3 id="wound-two-rolls"></h3>
+            <h3 id="wound-three-rolls"></h3>
+            <h3 id="wound-four-rolls"></h3>
+            <h3 id="wound-five-rolls"></h3>
+            <h3 id="wound-six-rolls"></h3>
+          </div>
+        </div>
+        <div class="roll card text-center">
+          <div class="card-body">
+            <h2 class="card-title">To Save</h2>
+            <p class="card-text">Defender Rolls to Save Total Wounds</p>
+            <a id="to-save" class="btn btn-danger" data-bs-toggle="button"
+              >Roll to Save!</a
+            >
+            <h3 id="save-one-rolls"></h3>
+            <h3 id="save-two-rolls"></h3>
+            <h3 id="save-three-rolls"></h3>
+            <h3 id="save-four-rolls"></h3>
+            <h3 id="save-five-rolls"></h3>
+            <h3 id="save-six-rolls"></h3>
+          </div>
+        </div>
+      </div>
     </container>
     <container>
-
-        <div class="roll row justify-content-center">
-            <button id="reset" class="btn btn-outline-secondary" data-bs-toggle="button"
-                style="width: 40%">Reset</button>
-        </div>
+      <div class="roll row justify-content-center">
+        <button
+          id="reset"
+          class="btn btn-outline-secondary"
+          data-bs-toggle="button"
+          style="width: 40%"
+        >
+          Reset
+        </button>
+      </div>
     </container>
     <!-- END ROLLING CARDS -->
 
     <script type="text/javascript">
-        var dice
-        var hitRollAmmount
-        var woundRollAmmount
-        var saveRollAmount
-        var diceRollOne = 0
-        var diceRollTwo = 0
-        var diceRollThree = 0
-        var diceRollFour = 0
-        var diceRollFive = 0
-        var diceRollSix = 0
+      var dice;
+      var hitRollAmmount;
+      var woundRollAmmount;
+      var saveRollAmount;
+      var diceRollOne = 0;
+      var diceRollTwo = 0;
+      var diceRollThree = 0;
+      var diceRollFour = 0;
+      var diceRollFive = 0;
+      var diceRollSix = 0;
 
-        function resetRoll() {
-            diceRollOne = 0
-            diceRollTwo = 0
-            diceRollThree = 0
-            diceRollFour = 0
-            diceRollFive = 0
-            diceRollSix = 0
-        }
+      function resetRoll() {
+        diceRollOne = 0;
+        diceRollTwo = 0;
+        diceRollThree = 0;
+        diceRollFour = 0;
+        diceRollFive = 0;
+        diceRollSix = 0;
+      }
 
+      $(document).ready(function () {
+        //To Hit Rolls
+        $("#to-hit").on("click", function () {
+          resetRoll();
+          var attacks = prompt("how many attacks?");
+          for (var i = 0; i < attacks; i++) {
+            rollDice();
+            console.log(attacks + "Attack Dice Rolled");
+          }
+          console.log("Ones: " + diceRollOne);
+          console.log("Twos: " + diceRollTwo);
+          console.log("Threes: " + diceRollThree);
+          console.log("Fours: " + diceRollFour);
+          console.log("Fives: " + diceRollFive);
+          console.log("Sixes: " + diceRollSix);
 
-        $(document).ready(function () {
-
-            //To Hit Rolls
-            $("#to-hit").on("click", function () {
-                resetRoll();
-                var attacks = prompt("how many attacks?")
-                for (var i = 0; i < attacks; i++) {
-                    rollDice();
-                    console.log(attacks + "Attack Dice Rolled");
-                }
-                console.log("Ones: " + diceRollOne);
-                console.log("Twos: " + diceRollTwo);
-                console.log("Threes: " + diceRollThree);
-                console.log("Fours: " + diceRollFour);
-                console.log("Fives: " + diceRollFive);
-                console.log("Sixes: " + diceRollSix);
-
-                $("#hit-one-rolls").text("Ones:" + " " + diceRollOne);
-                $("#hit-two-rolls").text("Twos:" + " " + diceRollTwo);
-                $("#hit-three-rolls").text("Threes:" + " " + diceRollThree);
-                $("#hit-four-rolls").text("Fours:" + " " + diceRollFour);
-                $("#hit-five-rolls").text("Fives:" + " " + diceRollFive);
-                $("#hit-six-rolls").text("Sixes:" + " " + diceRollSix);
-            })
-
-            //To Wounds Rolls
-            $("#to-wound").on("click", function () {
-                resetRoll();
-                var hits = prompt("how many Hits?")
-                for (var i = 0; i < hits; i++) {
-                    rollDice()
-                    console.log(hits + "Hit Dice Rolled");
-                }
-                console.log("Ones: " + diceRollOne)
-                console.log("Twos: " + diceRollTwo)
-                console.log("Threes: " + diceRollThree)
-                console.log("Fours: " + diceRollFour)
-                console.log("Fives: " + diceRollFive)
-                console.log("Sixes: " + diceRollSix)
-
-                $("#wound-one-rolls").text("Ones:" + " " + diceRollOne);
-                $("#wound-two-rolls").text("Twos:" + " " + diceRollTwo);
-                $("#wound-three-rolls").text("Threes:" + " " + diceRollThree);
-                $("#wound-four-rolls").text("Fours:" + " " + diceRollFour);
-                $("#wound-five-rolls").text("Fives:" + " " + diceRollFive);
-                $("#wound-six-rolls").text("Sixes:" + " " + diceRollSix);
-            })
-
-            //To Save Rolls
-            $("#to-save").on("click", function () {
-                resetRoll();
-                var wounds = prompt("how many Wounds?")
-                for (var i = 0; i < wounds; i++) {
-                    rollDice()
-                    console.log(wounds + "Saving Dice Rolled");
-                }
-                $("#save-one-rolls").text("Ones:" + " " + diceRollOne);
-                $("#save-two-rolls").text("Twos:" + " " + diceRollTwo);
-                $("#save-three-rolls").text("Threes:" + " " + diceRollThree);
-                $("#save-four-rolls").text("Fours:" + " " + diceRollFour);
-                $("#save-five-rolls").text("Fives:" + " " + diceRollFive);
-                $("#save-six-rolls").text("Sixes:" + " " + diceRollSix);
-            })
-
-            //Reset Button
-            $("#reset").on("click", function () {
-                $("#hit-one-rolls").text("");
-                $("#hit-two-rolls").text("");
-                $("#hit-three-rolls").text("");
-                $("#hit-four-rolls").text("");
-                $("#hit-five-rolls").text("");
-                $("#hit-six-rolls").text("");
-                $("#wound-one-rolls").text("");
-                $("#wound-two-rolls").text("");
-                $("#wound-three-rolls").text("");
-                $("#wound-four-rolls").text("");
-                $("#wound-five-rolls").text("");
-                $("#wound-six-rolls").text("");
-                $("#save-one-rolls").text("");
-                $("#save-two-rolls").text("");
-                $("#save-three-rolls").text("");
-                $("#save-four-rolls").text("");
-                $("#save-five-rolls").text("");
-                $("#save-six-rolls").text("");
-            })
-
-
-            // Roll Dice
-            function rollDice() {
-                diceRoll = Math.floor(Math.random() * 6) + 1;
-
-                if (diceRoll === 1) {
-                    diceRollOne = diceRollOne + 1;
-                }
-                if (diceRoll === 2) {
-                    diceRollTwo = diceRollTwo + 1;
-                }
-                if (diceRoll === 3) {
-                    diceRollThree = diceRollThree + 1;
-                }
-                if (diceRoll === 4) {
-                    diceRollFour = diceRollFour + 1;
-                }
-                if (diceRoll === 5) {
-                    diceRollFive = diceRollFive + 1;
-                }
-                if (diceRoll === 6) {
-                    diceRollSix = diceRollSix + 1;
-                }
-            }
-
-
-
-
-
+          $("#hit-one-rolls").text("Ones:" + " " + diceRollOne);
+          $("#hit-two-rolls").text("Twos:" + " " + diceRollTwo);
+          $("#hit-three-rolls").text("Threes:" + " " + diceRollThree);
+          $("#hit-four-rolls").text("Fours:" + " " + diceRollFour);
+          $("#hit-five-rolls").text("Fives:" + " " + diceRollFive);
+          $("#hit-six-rolls").text("Sixes:" + " " + diceRollSix);
         });
+
+        //To Wounds Rolls
+        $("#to-wound").on("click", function () {
+          resetRoll();
+          var hits = prompt("how many Hits?");
+          for (var i = 0; i < hits; i++) {
+            rollDice();
+            console.log(hits + "Hit Dice Rolled");
+          }
+          console.log("Ones: " + diceRollOne);
+          console.log("Twos: " + diceRollTwo);
+          console.log("Threes: " + diceRollThree);
+          console.log("Fours: " + diceRollFour);
+          console.log("Fives: " + diceRollFive);
+          console.log("Sixes: " + diceRollSix);
+
+          $("#wound-one-rolls").text("Ones:" + " " + diceRollOne);
+          $("#wound-two-rolls").text("Twos:" + " " + diceRollTwo);
+          $("#wound-three-rolls").text("Threes:" + " " + diceRollThree);
+          $("#wound-four-rolls").text("Fours:" + " " + diceRollFour);
+          $("#wound-five-rolls").text("Fives:" + " " + diceRollFive);
+          $("#wound-six-rolls").text("Sixes:" + " " + diceRollSix);
+        });
+
+        //To Save Rolls
+        $("#to-save").on("click", function () {
+          resetRoll();
+          var wounds = prompt("how many Wounds?");
+          for (var i = 0; i < wounds; i++) {
+            rollDice();
+            console.log(wounds + "Saving Dice Rolled");
+          }
+          $("#save-one-rolls").text("Ones:" + " " + diceRollOne);
+          $("#save-two-rolls").text("Twos:" + " " + diceRollTwo);
+          $("#save-three-rolls").text("Threes:" + " " + diceRollThree);
+          $("#save-four-rolls").text("Fours:" + " " + diceRollFour);
+          $("#save-five-rolls").text("Fives:" + " " + diceRollFive);
+          $("#save-six-rolls").text("Sixes:" + " " + diceRollSix);
+        });
+
+        //Reset Button
+        $("#reset").on("click", function () {
+          $("#hit-one-rolls").text("");
+          $("#hit-two-rolls").text("");
+          $("#hit-three-rolls").text("");
+          $("#hit-four-rolls").text("");
+          $("#hit-five-rolls").text("");
+          $("#hit-six-rolls").text("");
+          $("#wound-one-rolls").text("");
+          $("#wound-two-rolls").text("");
+          $("#wound-three-rolls").text("");
+          $("#wound-four-rolls").text("");
+          $("#wound-five-rolls").text("");
+          $("#wound-six-rolls").text("");
+          $("#save-one-rolls").text("");
+          $("#save-two-rolls").text("");
+          $("#save-three-rolls").text("");
+          $("#save-four-rolls").text("");
+          $("#save-five-rolls").text("");
+          $("#save-six-rolls").text("");
+        });
+
+        // Roll Dice
+        function rollDice() {
+          diceRoll = Math.floor(Math.random() * 6) + 1;
+          if (diceRoll === 1) {
+            diceRollOne = diceRollOne + 1;
+          }
+          if (diceRoll === 2) {
+            diceRollTwo = diceRollTwo + 1;
+          }
+          if (diceRoll === 3) {
+            diceRollThree = diceRollThree + 1;
+          }
+          if (diceRoll === 4) {
+            diceRollFour = diceRollFour + 1;
+          }
+          if (diceRoll === 5) {
+            diceRollFive = diceRollFive + 1;
+          }
+          if (diceRoll === 6) {
+            diceRollSix = diceRollSix + 1;
+          }
+        }
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
