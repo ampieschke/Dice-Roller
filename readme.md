@@ -9,4 +9,4 @@
 [Live Web link](https://ampieschke.github.io/Dice-Roller/)
 
 # Screenshot
-![Main](assets\WGD.png)
+![Main](assets/WGD.png)
